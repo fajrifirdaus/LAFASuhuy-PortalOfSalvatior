@@ -4,7 +4,7 @@
 ![Image_1](graphics/readme/prototypeM3.png)
 
 # Table of Contents
-[Team Name](#Team Name) 
+[Team Name](#TeamName) 
 
 [Description](#description)
 
