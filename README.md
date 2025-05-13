@@ -4,7 +4,7 @@
 ![Image_1](graphics/readme/prototypeM3.png)
 
 # Table of Contents
-[Team Name](#teamname) 
+[Team Name](#team-name) 
 
 [Description](#description)
 
@@ -19,7 +19,7 @@
 [Thanks To](#thanks-to)
 
 ## Team Name
-**LAFAS**
+**LAFAS UHUY**
 
 
 ## Description
