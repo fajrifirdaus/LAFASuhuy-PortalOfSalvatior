@@ -4,6 +4,8 @@
 ![Image_1](graphics/readme/prototypeM3.png)
 
 # Table of Contents
+[Team Name](#Team Name) 
+
 [Description](#description)
 
 [Library](#library)
@@ -15,6 +17,10 @@
 [Contributors](#contributors)
 
 [Thanks To](#thanks-to)
+
+## Team Name
+**LAFAS**
+
 
 ## Description
 **Portal Of Salvatior** adalah sebuah permainan petualangan berjenis top-down
