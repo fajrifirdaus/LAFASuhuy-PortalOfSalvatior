@@ -28,7 +28,7 @@ def show_crystal1(display_surface):
 def show_crystal2(display_surface):
     text_crystal2 = [
         "Verdant Shard telah ditemukan",
-        "Hati Hati perjalanan di planet ini semuakin berbahaya !!"
+        "Hati Hati perjalanan di planet ini semakin berbahaya !!"
     ]
     show_text = Message(text_crystal2, display_surface)
     show_text.run()
@@ -36,10 +36,32 @@ def show_crystal2(display_surface):
 def show_crystal3(display_surface):
     text_crystal3 = [
         "Void Fragment sebagai pusaka terakhir telah anda temukan",
-        "satukan seluruh batu yang anda kumpulkan",
-        "Gunakanlah Portal klan Bintang dengan bijak"
+        "satukan seluruh crystal yang anda kumpulkan",
     ]
     show_text = Message(text_crystal3, display_surface)
+    show_text.run()
+
+def show_crystal_complete(display_surface):
+    text_crystal_complete = [
+        "Selamat crystal anda telah lengkap",
+        "Gunakanlah Portal klan Bintang dengan bijak"
+    ]
+    show_text = Message(text_crystal_complete, display_surface)
+    show_text.run()
+
+def show_crystal_not_complete(display_surface):
+    text_crystal_not_complete = [
+        "Lengkapkan crystal untuk membuka portal klan bintang"
+    ]
+    show_text = Message(text_crystal_not_complete, display_surface)
+    show_text.run()
+
+def show_portal(display_surface):
+    text_portal = [
+        "Petualangan anda telah usai",
+        "kamu telah menyelesaikan misi dengan baik, selamattt!!!"
+    ]
+    show_text = Message(text_portal, display_surface)
     show_text.run()
 
 def show_crystal4(display_surface):

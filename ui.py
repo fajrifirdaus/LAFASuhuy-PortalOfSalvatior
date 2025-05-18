@@ -19,6 +19,10 @@ class UI:
 			weapon = pygame.image.load(path).convert_alpha()
 			self.weapon_graphics.append(weapon)
 
+		#crystal setup
+		self.crystal_point = 0
+		
+
 		# convert magic dictionary
 		self.magic_graphics = []
 		for magic in magic_data.values():
@@ -73,11 +77,25 @@ class UI:
 
 		self.display_surface.blit(magic_surf,magic_rect)
 
+	def show_crystal_point(self):
+		text_surf = self.font.render(f'Crystal: {self.crystal_point}', False, TEXT_COLOR)
+		text_rect = text_surf.get_rect()
+
+		# Tempatkan di pojok kanan atas, dengan margin dari kanan dan atas
+		x = self.display_surface.get_size()[0] - text_rect.width - 20  # 20 px dari kanan
+		y = 10  # 10 px dari atas, sesuaikan jika kamu punya bar darah/energi
+
+		bg_rect = text_surf.get_rect(topleft=(x, y))
+		pygame.draw.rect(self.display_surface, UI_BG_COLOR, bg_rect.inflate(10, 10))
+		self.display_surface.blit(text_surf, (x, y))
+		pygame.draw.rect(self.display_surface, UI_BORDER_COLOR, bg_rect.inflate(10, 10), 3)
+
 	def display(self,player):
 		self.show_bar(player.health,player.stats['health'],self.health_bar_rect,HEALTH_COLOR)
 		self.show_bar(player.energy,player.stats['energy'],self.energy_bar_rect,ENERGY_COLOR)
 
 		self.show_exp(player.exp)
+		self.show_crystal_point()
 
 		self.weapon_overlay(player.weapon_index,not player.can_switch_weapon)
 		self.magic_overlay(player.magic_index,not player.can_switch_magic)

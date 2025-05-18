@@ -53,6 +53,9 @@ class Level:
         # message flags
         self.opening_message_displayed = False
 
+        # status tabrakan
+        self.portal_touching = False  # player lagi nempel portal?
+
     def create_map(self):
         layouts = {
             'boundary': import_csv_layout('map/map_FloorBlocks.csv'),
@@ -62,7 +65,9 @@ class Level:
             'crystal1': import_csv_layout('map/map_crystal1.csv'),
             'crystal2': import_csv_layout('map/map_crystal2.csv'),
             'crystal3': import_csv_layout('map/map_crystal3.csv'),
-            'crystal4': import_csv_layout('map/map_crystal4.csv')
+            'crystal4': import_csv_layout('map/map_crystal4.csv'),
+            'crystal5': import_csv_layout('map/map_crystal5.csv'),
+            'portal': import_csv_layout('map/map_portal.csv')
         }
         graphics = {
             'grass': import_folder('graphics/Grass'),
@@ -70,7 +75,9 @@ class Level:
             'crystal1': import_folder('graphics/crystal1'),
             'crystal2': import_folder('graphics/crystal2'),
             'crystal3': import_folder('graphics/crystal3'),
-            'crystal4': import_folder('graphics/crystal4')
+            'crystal4': import_folder('graphics/crystal1'),
+            'crystal5': import_folder('graphics/crystal2'),
+            'portal': import_folder('graphics/portal')
         }
 
         for style, layout in layouts.items():
@@ -102,7 +109,13 @@ class Level:
                             Tile((x, y), [self.visible_sprites, self.obstacle_sprites, self.attackable_sprites], 'crystal3', crystal3_image) 
                         if style == 'crystal4':
                             crystal4_image = choice(graphics['crystal4'])
-                            Tile((x, y), [self.visible_sprites, self.obstacle_sprites, self.attackable_sprites], 'crystal4', crystal4_image)                        
+                            Tile((x, y), [self.visible_sprites, self.obstacle_sprites, self.attackable_sprites], 'crystal4', crystal4_image)
+                        if style == 'crystal5':
+                            crystal5_image = choice(graphics['crystal5'])
+                            Tile((x, y), [self.visible_sprites, self.obstacle_sprites, self.attackable_sprites], 'crystal5', crystal5_image)
+                        if style == 'portal':
+                            portal_image = choice(graphics['portal'])
+                            Tile((x, y), [self.visible_sprites, self.obstacle_sprites,self.attackable_sprites], 'portal', portal_image)                        
                         if style == 'entities':
                             if col == '394':
                                 self.player = Player(
@@ -154,23 +167,41 @@ class Level:
                             target_sprite.get_damage(self.player, attack_sprite.sprite_type)
 
     def handle_crystal_collision(self):
-        crystal_types = ['crystal1', 'crystal2', 'crystal3', 'crystal4']
+        crystal_types = ['crystal1', 'crystal2', 'crystal3', 'crystal4', 'crystal5']
         for crystal_type in crystal_types:
             crystals = [sprite for sprite in self.attackable_sprites if sprite.sprite_type == crystal_type]
             for crystal in crystals:
                 if crystal.rect.colliderect(self.player.rect):
                     if crystal_type == 'crystal1':
                         message = show_crystal1(self.display_surface)
-                        pygame.QUIT()
                     elif crystal_type == 'crystal2':
                         message = show_crystal2(self.display_surface)
                     elif crystal_type == 'crystal3':
                         message = show_crystal3(self.display_surface)
-                        pygame.QUIT()
                     elif crystal_type == 'crystal4':
-                        message = show_crystal4(self.display_surface)
-                        pygame.QUIT()
+                        message = show_crystal1(self.display_surface)
+                    elif crystal_type == 'crystal5':
+                        message = show_crystal2(self.display_surface)
+                    self.ui.crystal_point += 1
+                    if self.ui.crystal_point >= 5:
+                        message = show_crystal_complete(self.display_surface)
                     crystal.kill()  # Remove crystal tile after collision
+
+    def handle_portal_collision(self):
+        #cek portal
+        portals = [sprite for sprite in self.attackable_sprites if sprite.sprite_type == 'portal']
+
+        # kalau ada portal yang bersinggungan.
+        touching_now = any(p.rect.colliderect(self.player.rect) for p in portals)
+
+        for portal in portals:
+            if portal.rect.colliderect(self.player.rect) and touching_now and not self.portal_touching:
+                if(self.ui.crystal_point < 5):
+                    message = show_crystal_not_complete(self.display_surface)
+                if self.ui.crystal_point >= 5:
+                    message = show_portal(self.display_surface)
+                    pygame.QUIT()
+            self.portal_touching = touching_now
 
     def damage_player(self, amount, attack_type):
         if self.player.vulnerable:
@@ -205,6 +236,7 @@ class Level:
             self.visible_sprites.enemy_update(self.player)
             self.player_attack_logic()
             self.handle_crystal_collision()  # Check for crystal collision each frame
+            self.handle_portal_collision()  # Check for portal collision each frame
 
 class YSortCameraGroup(pygame.sprite.Group):
     def __init__(self):

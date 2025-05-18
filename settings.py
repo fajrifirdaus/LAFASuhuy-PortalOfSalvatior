@@ -11,6 +11,8 @@ HITBOX_OFFSET = {
     'crystal2': 0,
     'crystal3': 0,
     'crystal4': 0,
+    'crystal5': 0,
+    'portal': 0,
     'invisible': 0}
 
 # ui 
