@@ -4,6 +4,8 @@
 ![Image_1](graphics/readme/prototypeM3.png)
 
 # Table of Contents
+[Team Name](#team-name) 
+
 [Description](#description)
 
 [Library](#library)
@@ -15,6 +17,10 @@
 [Contributors](#contributors)
 
 [Thanks To](#thanks-to)
+
+## Team Name
+**LAFAS UHUY**
+
 
 ## Description
 **Portal Of Salvatior** adalah sebuah permainan petualangan berjenis top-down
@@ -58,10 +64,10 @@ python main.py
 | Nama | NIM | Contributor |
 | ---- | --- | --- |
 | Muhammad Fadhilah Akbar | 123140003 |  |
-| Annisa Al Qoriah | 122140030 |  |
-| Sigit Kurnia Hartawan | 122140033 |  |
-| Muhammad Fajri Firdaus | 122140050 |  |
-| Louis Hutabarat | 121140052 |  | 
+| Annisa Al Qoriah | 123140030 |  |
+| Sigit Kurnia Hartawan | 123140033 |  |
+| Muhammad Fajri Firdaus | 123140050 |  |
+| Louis Hutabarat | 123140052 |  | 
 
 ## Thanks To
 - [Freepik](freepik.com )
