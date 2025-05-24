@@ -22,6 +22,7 @@ ENERGY_BAR_WIDTH = 140
 ITEM_BOX_SIZE = 80
 UI_FONT = 'graphics/font/joystix.ttf'
 UI_FONT_SIZE = 18
+EXP_FONT_SIZE = 24
 
 # general colors
 WATER_COLOR = (29,250,0)
@@ -55,5 +56,5 @@ magic_data = {
 
 #enemy
 monster_data = {
-	'siMerah': {'health': 100,'exp':100,'damage':20,'attack_type': 'slash', 'attack_sound':'audio/slash.wav', 'speed': 3, 'resistance': 3, 'attack_radius': 80, 'notice_radius': 360},
-	'siHijau': {'health': 70,'exp':120,'damage':6,'attack_type': 'leaf_attack', 'attack_sound':'audio/slash.wav', 'speed': 3, 'resistance': 3, 'attack_radius': 50, 'notice_radius': 300}}
+	'siMerah': {'health': 100,'exp':120,'damage':20,'attack_type': 'slash', 'attack_sound':'audio/slash.wav', 'speed': 3, 'resistance': 3, 'attack_radius': 80, 'notice_radius': 360},
+	'siHijau': {'health': 70,'exp':100,'damage':6,'attack_type': 'leaf_attack', 'attack_sound':'audio/slash.wav', 'speed': 3, 'resistance': 3, 'attack_radius': 50, 'notice_radius': 300}}

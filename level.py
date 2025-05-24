@@ -25,7 +25,10 @@ class Sprite(ABC):
         pass
 
 class Level:
-    def __init__(self):
+    def __init__(self, selected_character=None):
+        self.selected_character = selected_character
+        print(f"Karakter yang dipilih: {self.selected_character}")
+
         # get the display surface
         self.display_surface = pygame.display.get_surface()
         self.game_paused = False
@@ -124,7 +127,8 @@ class Level:
                                     self.obstacle_sprites,
                                     self.create_attack,
                                     self.destroy_attack,
-                                    self.create_magic)
+                                    self.create_magic,
+                                    self.selected_character)
                             else:
                                 if col == '390': monster_name = 'siHijau'
                                 else: monster_name = 'siMerah'
@@ -190,10 +194,8 @@ class Level:
     def handle_portal_collision(self):
         #cek portal
         portals = [sprite for sprite in self.attackable_sprites if sprite.sprite_type == 'portal']
-
         # kalau ada portal yang bersinggungan.
         touching_now = any(p.rect.colliderect(self.player.rect) for p in portals)
-
         for portal in portals:
             if portal.rect.colliderect(self.player.rect) and touching_now and not self.portal_touching:
                 if(self.ui.crystal_point < 5):

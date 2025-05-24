@@ -1,10 +1,11 @@
 import pygame
+from settings import *
 
 class Message:
     def __init__(self, messages, display_surface):
         pygame.init()
         self.display_surface = display_surface
-        self.font = pygame.font.Font('freesansbold.ttf', 24)
+        self.font = pygame.font.Font((UI_FONT), 16)
         self.timer = pygame.time.Clock()
         self.messages = messages
         self.counter = 0
