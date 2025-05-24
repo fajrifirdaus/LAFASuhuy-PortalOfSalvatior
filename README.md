@@ -42,7 +42,7 @@ mendalam dan memikat bagi para pemainnya.
 - [**eror**](https://chatgpt.com/)
 
 ## How to Play
-<!-- ![Image_2](graphics/readme/guide.png) -->
+![Image_2](graphics/readme/guide.png)
 
 <li> Install Python 3.11 or higher</li>
 Run the following command to start the game:
