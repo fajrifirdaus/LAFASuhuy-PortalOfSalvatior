@@ -1,7 +1,7 @@
 <h1 align="center">Portal Of Salvatior</h1>
 
-![Image_1](graphics/readme/PORTAL%20OF%20SALVATIOR.png)
-![Image_1](graphics/readme/prototypeFP.png)
+![Image_1](graphics/readme/PORTAL%20OF%20SALVATI.png)
+![Image_1](graphics/readme/prototype.png)
 
 # Table of Contents
 [Team Name](#team-name) 
