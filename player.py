@@ -121,7 +121,7 @@ class Player(Entity):
 				cost = list(magic_data.values())[self.magic_index]['cost']
 				self.create_magic(style,strength,cost)
 
-			if keys[pygame.K_1] and self.can_switch_weapon:
+			if keys[pygame.K_2] and self.can_switch_weapon:
 				self.can_switch_weapon = False
 				self.weapon_switch_time = pygame.time.get_ticks()
 				
@@ -132,7 +132,7 @@ class Player(Entity):
 					
 				self.weapon = list(weapon_data.keys())[self.weapon_index]
 
-			if keys[pygame.K_2] and self.can_switch_magic:
+			if keys[pygame.K_1] and self.can_switch_magic:
 				self.can_switch_magic = False
 				self.magic_switch_time = pygame.time.get_ticks()
 				
