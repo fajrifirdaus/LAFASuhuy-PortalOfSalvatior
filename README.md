@@ -23,18 +23,8 @@
 
 
 ## Description
-**Portal Of Salvatior** adalah sebuah permainan petualangan berjenis top-down
-adventure dengan elemen puzzle yang menjelajahi antariksa yang mengeksplorasi
-luar angkasa dengan tujuan untuk menemukan sumber daya baru untuk
-menyelamatkan umat manusia namun, astronot melakukan pendaratan darurat di
-planet asing yang belum pernah dijelajahi. Disana dia harus melawan banyak alien
-dan mempunyai misi untuk mengumpulkan 3 item batu agar dapat membuka portal
-yang membawa dia ke jalan keluar dari planet berbahaya tersebut. Selama
-mengeksplorasi, astronot harus berhati-hati karena di setiap langkah bisa bertemu
-dengan alien. Pencarian portal menjadi tujuan utama astronot dengan mencari 3 item
-batu merah, hijau, dan biru yang tersembunyi di dalam planet. Suasana petualangan
-yang menegangkan dan penuh misteri menawarkan pengalaman petualangan yang
-mendalam dan memikat bagi para pemainnya.
+**Portal Of Salvatior** adalah sebuah permainan petualangan berjenis top-down adventure yang menjelajahi antariksa yang mengeksplorasi luar angkasa dengan tujuan untuk menemukan sumber daya baru untuk menyelamatkan umat manusia namun, astronot melakukan pendaratan darurat di planet asing yang belum pernah dijelajahi. Disana dia harus melawan banyak alien dan mempunyai misi untuk mengumpulkan 3 jenis item crystal agar dapat membuka portal yang membawa dia ke jalan keluar dari planet berbahaya tersebut. Selama mengeksplorasi, astronot harus berhati-hati karena di setiap langkah bisa bertemu dengan alien. Pencarian portal menjadi tujuan utama astronot dengan mencari 3 item crystal merah, hijau, dan biru yang tersembunyi di dalam planet. Suasana petualangan yang menegangkan dan penuh misteri menawarkan pengalaman petualangan yang mendalam dan memikat bagi para pemainnya.
+
 ## Library
 - [**pygame**](https://www.python.org/)
 - [**random**](https://docs.python.org/3/library/random.html)
