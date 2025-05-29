@@ -53,11 +53,11 @@ python main.py
 
 | Nama | NIM | Contributor |
 | ---- | --- | --- |
-| Muhammad Fadhilah Akbar | 123140003 |  |
-| Annisa Al Qoriah | 123140030 |  |
-| Sigit Kurnia Hartawan | 123140033 |  |
-| Muhammad Fajri Firdaus | 123140050 |  |
-| Louis Hutabarat | 123140052 |  | 
+| Muhammad Fadhilah Akbar | 123140003 | Programmer, Lead Designer |
+| Annisa Al Qoriah | 123140030 | Programmer, Designer |
+| Sigit Kurnia Hartawan | 123140033 | Programmer, Designer |
+| Muhammad Fajri Firdaus | 123140050 | Lead Programmer, Lead Map Designer, Designer |
+| Louis Hutabarat | 123140052 | Programmer, Designer | 
 
 ## Thanks To
 - [Freepik](freepik.com )
