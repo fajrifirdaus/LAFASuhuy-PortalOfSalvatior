@@ -24,6 +24,7 @@
 **LAFAS UHUY**
 
 ## You Tube
+![Image_4](graphics/readme/sampul.png)
 **Link : [Portal Of Salvatior](https://youtu.be/uH6PpF52GZU)** 
 
 ## Description
